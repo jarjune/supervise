@@ -28,7 +28,7 @@ public class IndexController {
 
     @RequestMapping(value = {"/index", "/login"})
     public List<UserEntity> login() {
-        return indexService.getUser();
+        return indexService.getUser("aaaa");
     }
 
     @RequestMapping(value = "/login/user/{user}/password/{password}", method = RequestMethod.POST)

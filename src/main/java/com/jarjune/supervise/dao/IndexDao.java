@@ -9,10 +9,10 @@ import java.util.List;
 
 public interface IndexDao {
 
-    @Select("select * from users")
+    @Select("select * from users where u_name = #{username}")
     @Results({
             @Result(property = "username", column = "u_name"),
             @Result(property = "password", column = "u_pass")
     })
-    List<UserEntity> getUser();
+    List<UserEntity> getUser(String username);
 }

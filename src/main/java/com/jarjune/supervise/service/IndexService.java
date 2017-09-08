@@ -13,8 +13,8 @@ public class IndexService {
     @Autowired
     private IndexDao indexDao;
 
-    public List<UserEntity> getUser() {
-        return indexDao.getUser();
+    public List<UserEntity> getUser(String username) {
+        return indexDao.getUser(username);
     }
 
 }
